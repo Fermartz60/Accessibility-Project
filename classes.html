@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conoce las clases de Guardianes de Destiny 1: Titán, Cazador y Hechicero. Sus habilidades y estilos de juego.">
+
+    <title>Clases - Destiny 1</title>
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- ¡Importante! Aquí vive la clase .visually-hidden -->
+    <link rel="stylesheet" href="css/accessibility.css">
+
+    <!-- CSS específico -->
+    <link rel="stylesheet" href="css/classes.css">
+</head>
+
+<body>
+
+    <!-- Skip link para teclado -->
+    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header role="banner" class="header">
+        <nav aria-label="Navegación principal" class="nav">
+            <div class="nav-inner">
+                <div class="nav-logo">
+                    <img src="assets/img/destiny-icon-white.png" alt="Destiny" class="logo-icon">
+                    <span class="logo-text">DESTINY</span>
+                </div>
+
+                <button id="menu-toggle" 
+                    aria-expanded="false" 
+                    aria-controls="menu"
+                    aria-label="Abrir menú de navegación" 
+                    class="nav-toggle mobile-btn">
+                    ☰
+                </button>
+
+                <ul id="menu" class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <!-- aria-current="page" le dice al lector: "ESTÁS AQUÍ" -->
+                    <li><a href="classes.html" class="active" aria-current="page">Clases</a></li>
+                    <li><a href="raids.html">Raids</a></li>
+                    <li><a href="video.html">Video</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main id="contenido" tabindex="-1" class="classes-container">
+
+        <header class="page-header">
+            <h1>Clases de Guardianes</h1>
+            <p>Selecciona una clase para ver sus habilidades y estilo de juego.</p>
+        </header>
+
+        <!-- Selector de Pestañas -->
+        <section aria-labelledby="selector-clases" class="class-selector">
+            <h2 id="selector-clases">Selecciona una clase</h2>
+
+            <!-- role="tablist" indica que esto es un menú de pestañas -->
+            <div class="class-buttons" role="tablist">
+                <button role="tab" aria-selected="true" data-class="titan">Titán</button>
+                <button role="tab" aria-selected="false" data-class="hunter">Cazador</button>
+                <button role="tab" aria-selected="false" data-class="warlock">Hechicero</button>
+            </div>
+        </section>
+
+        <!-- CONTENIDO DINÁMICO -->
+        <!-- aria-live="polite": Si el contenido cambia, el lector esperará a que el usuario termine de hacer cosas para leerlo -->
+        <section aria-live="polite" aria-labelledby="info-clase" class="class-info">
+            
+            <!-- Título invisible para diseño, pero visible para lectores -->
+            <h2 id="info-clase" class="visually-hidden">Información de la clase</h2>
+
+            <div id="class-content" class="class-horizontal">
+                <!-- Aquí el archivo classes.js inyectará la imagen y el texto -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <p>© 2024 Portal Accesible de Destiny — Proyecto académico</p>
+        <p>No oficial. Todo el contenido pertenece a Bungie.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/menu.js"></script>
+    <script src="js/classes.js"></script>
+
+</body>
+</html>

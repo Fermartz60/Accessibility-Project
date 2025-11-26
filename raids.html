@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guía de las incursiones (Raids) de Destiny 1: Crota's End, King's Fall, Vault of Glass y Wrath of the Machine.">
+
+    <title>Raids - Destiny 1</title>
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+
+    <!-- CSS de esta página -->
+    <link rel="stylesheet" href="css/raids.css">
+</head>
+
+<body>
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+    <header role="banner" class="header">
+        <nav aria-label="Navegación principal" class="nav">
+            <div class="nav-inner">
+                <div class="nav-logo">
+                    <img src="assets/img/destiny-icon-white.png" alt="Destiny" class="logo-icon">
+                    <span class="logo-text">DESTINY</span>
+                </div>
+
+                <button 
+                    id="menu-toggle" 
+                    aria-expanded="false" 
+                    aria-controls="menu"
+                    aria-label="Abrir menú de navegación"
+                    class="nav-toggle mobile-btn">
+                    ☰
+                </button>
+
+                <ul id="menu" class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="classes.html">Clases</a></li>
+                    <li><a href="raids.html" class="active" aria-current="page">Raids</a></li>
+                    <li><a href="video.html">Video</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido" tabindex="-1" class="raids-container">
+        
+        <!-- CAMBIO AQUÍ: Header con logo e icono alineados -->
+        <header class="page-header">
+            <div class="title-with-icon">
+                <!-- 
+                   IMPORTANTE: Asegúrate de guardar tu imagen como 'raid-logo.png' 
+                   en la carpeta assets/icons/ o cambia el nombre aquí.
+                   aria-hidden="true" porque es decorativo (ya dice "Raids" en el texto).
+                -->
+                <img src="assets/logos/logoraid.jpg" alt="" aria-hidden="true" class="page-title-icon">
+                <h1>Raids de Destiny 1</h1>
+            </div>
+            <p>Las raids representan los mayores desafíos del juego. Requieren coordinación, estrategia y ejecución precisa.</p>
+        </header>
+
+        <section class="raids-grid">
+
+            <!-- Crota -->
+            <article class="raid-card">
+                <img src="assets/img/Crota.jpg" alt="El príncipe de la colmena Crota empuñando una espada verde brillante" class="raid-img">
+                <h2>Crota's End</h2>
+                <p>Una incursión ubicada en las profundidades de la Luna. Enfrenta al príncipe de la colmena, Crota.</p>
+            </article>
+
+            <!-- Oryx -->
+            <article class="raid-card">
+                <img src="assets/img/Oryx.jpg" alt="Oryx, el Rey de los Poseídos" class="raid-img">
+                <h2>King's Fall</h2>
+                <p>La caída del Rey Oryx ocurre en una nave colosal. Una de las raids más complejas del juego.</p>
+            </article>
+
+            <!-- Atheon -->
+            <article class="raid-card">
+                <img src="assets/img/Atheon.jpg" alt="Atheon, Confluencia del Tiempo" class="raid-img">
+                <h2>Vault of Glass</h2>
+                <p>La primera raid de Destiny. Combina viajes temporales, Vex y un diseño icónico.</p>
+            </article>
+
+            <!-- Aksis -->
+            <article class="raid-card">
+                <img src="assets/img/Aksis.jpg" alt="Aksis, Arconte" class="raid-img">
+                <h2>Wrath of the Machine</h2>
+                <p>La raid de los SIVA. Ritmo rápido, mecánicas sincronizadas y una estética memorable.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <p>© 2024 Portal Accesible de Destiny — Proyecto académico</p>
+        <p>No oficial. Contenido perteneciente a Bungie.</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

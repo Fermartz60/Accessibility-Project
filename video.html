@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Video cinemático de Destiny 1 con opciones de accesibilidad: Subtítulos (CC) y Transcripción Interactiva completa.">
+
+    <title>Video Accesible - Destiny 1</title>
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+
+    <!-- CSS específico -->
+    <link rel="stylesheet" href="css/video.css">
+</head>
+
+<body>
+
+    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header role="banner" class="header">
+        <nav aria-label="Navegación principal" class="nav">
+            <div class="nav-inner">
+                <div class="nav-logo">
+                    <img src="assets/img/destiny-icon.png" alt="Destiny" class="logo-icon">
+                    <span class="logo-text">DESTINY</span>
+                </div>
+
+                <button id="menu-toggle" 
+                    aria-expanded="false" 
+                    aria-controls="menu"
+                    aria-label="Abrir menú de navegación" 
+                    class="nav-toggle mobile-btn">
+                    ☰
+                </button>
+
+                <ul id="menu" class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="classes.html">Clases</a></li>
+                    <li><a href="raids.html">Raids</a></li>
+                    <li><a href="video.html" class="active" aria-current="page">Video</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido" tabindex="-1" class="video-container">
+
+        <header class="page-header">
+            <h1>Trailer: La Leyenda Comienza</h1>
+            <p>Explora el trailer cinemático con múltiples opciones de accesibilidad.</p>
+        </header>
+
+        <!-- REPRODUCTOR PRINCIPAL -->
+        <section class="video-player-section">
+            <div class="video-wrapper-native">
+                <video id="main-player" controls width="100%" poster="assets/img/hero-bg.jpg">
+                    <source src="assets/video/destiny-trailer.mp4" type="video/mp4">
+                    
+                    <!-- Pista de Subtítulos (CC) por defecto -->
+                    <track 
+                        kind="captions" 
+                        src="assets/video/subtitulos.vtt" 
+                        srclang="es" 
+                        label="Español (CC)" 
+                        default>
+                </video>
+            </div>
+            <p class="caption-note"><small>Nota: Activa los subtítulos (CC) en el reproductor para ver los diálogos.</small></p>
+        </section>
+
+        <!-- CONTROLES DE ACCESIBILIDAD -->
+        <section class="video-controls" aria-label="Opciones de accesibilidad">
+            <div class="video-tabs">
+                <!-- Solo dejamos el botón de Transcripción -->
+                <button id="btn-toggle-transcript" class="video-btn" aria-expanded="false" aria-controls="transcript-panel">
+                    📜 Ver Transcripción Completa (Diálogos y Descripción)
+                </button>
+            </div>
+        </section>
+
+        <!-- TRANSCRIPCIÓN INTERACTIVA -->
+        <section id="transcript-panel" class="transcript-section" hidden>
+            <div class="transcript-box">
+                <h3>Transcripción Interactiva</h3>
+                <p class="transcript-intro">Esta transcripción incluye tanto los diálogos como la descripción visual. Haz clic en el tiempo para saltar a esa escena.</p>
+
+                <ul class="transcript-list">
+                    <!-- INICIO DEL VIDEO -->
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="0">[00:00]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        A small spacecraft flies swiftly toward the gray surface of the Moon.
+                    </li>
+                    
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="2">[00:02]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The ship flies away. Quick cuts show details of the weapons and armor of three guardians.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="5">[00:05]</button>
+                        <span class="tag-audio">SPECTRE:</span>
+                        "Congratulations. Humans haven't been on the moon in hundreds of years."
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="9">[00:09]</button>
+                        <span class="tag-audio">HUNTER:</span>
+                        "Nice place to visit, but I wouldn't want to live here."
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="11">[00:11]</button>
+                        <span class="tag-audio">SPECTRE:</span>
+                        "Dying here is much more likely."
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="15">[00:15]</button>
+                        <span class="tag-audio">SORCERESS:</span>
+                        "Nice pep talk."
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="16">[00:16]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The three guardians walk on the lunar surface. The blue Earth shines beautifully on the dark horizon.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="21">[00:21]</button>
+                        <span class="tag-audio">TITAN:</span>
+                        "Oh man, there's nothing I hate more than an alien with no respect for history."
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="26">[00:26]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The Titan reloads his assault rifle with a sharp movement.
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="27">[00:27]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The team stops in front of a sinister Hive fortress.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="29">[00:29]</button>
+                        <span class="tag-audio">SORCERESS:</span>
+                        "Knock, knock."
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="31">[00:31]</button>
+                        <span class="tag-audio">TITAN:</span>
+                        "Who's there?"
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="33">[00:33]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The Titan fires a rocket directly at the fortress entrance. The door explodes.
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="36">[00:36]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        Alien creatures run out from the smoke.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="37">[00:37]</button>
+                        <span class="tag-audio">SORCERESS:</span>
+                        "Well, now it's a party."
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="38">[00:38]</button>
+                        <span class="tag-audio">SPECTRE:</span>
+                        "Music?"
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="40">[00:40]</button>
+                        <span class="tag-audio">HUNTER:</span>
+                        "Mhm, something classical."
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="42">[00:42]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        [Immigrant Song plays] The guardians charge heroically into battle.
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="44">[00:44]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The Sorceress throws a void grenade that detonates in a purple explosion.
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="48">[00:48]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The Titan jumps and slams the ground with electric fists, sending enemies flying.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="52">[00:52]</button>
+                        <span class="tag-audio">TITAN:</span>
+                        "Venus."
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="54">[00:54]</button>
+                        <span class="tag-audio">HUNTER:</span>
+                        "Venus, baby. Venus!"
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="55">[00:55]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        On Venus, the three ride their Sparrow vehicles at full speed through the jungle toward a Vex structure.
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="59">[00:59]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The Titan fires his shotgun point-blank at a Vex robot. The Sorceress violently pushes another enemy.
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="64">[01:04]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The team runs toward a teleportation portal. Surrounded, they shoot back-to-back against a horde of robots.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="70">[01:10]</button>
+                        <span class="tag-audio">SORCERESS:</span>
+                        "Hello, Mars."
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="72">[01:12]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        On the red dunes of Mars, they speed their Sparrows toward a Cabal military base.
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="75">[01:15]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        Under heavy machine gun fire, they take cover behind a rock.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="76">[01:16]</button>
+                        <span class="tag-audio">SORCERESS:</span>
+                        "Anybody speak space turtle?"
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="79">[01:19]</button>
+                        <span class="tag-audio">HUNTER:</span>
+                        "I can say hello in any language."
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="81">[01:21]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The Hunter runs, throws two grenades, teleports behind the enemy. The massive Cabal explodes.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="89">[01:29]</button>
+                        <span class="tag-audio">TITAN:</span>
+                        "Looks like he can say goodbye, too."
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="92">[01:32]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The guardians' ship flies toward ancient ruins on Earth.
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="95">[01:35]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The team overlooks a massive cliff from a high ledge.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="96">[01:36]</button>
+                        <span class="tag-audio">HUNTER:</span>
+                        "Wow, what do you think is down there?"
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="99">[01:39]</button>
+                        <span class="tag-audio">SPECTRE:</span>
+                        "Uh, death."
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="101">[01:41]</button>
+                        <span class="tag-audio">TITAN:</span>
+                        "Theirs or ours?"
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="102">[01:42]</button>
+                        <span class="tag-audio">SORCERESS:</span>
+                        "Let's find out."
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="103">[01:43]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        Without hesitation, the Sorceress bravely jumps into the void.
+                    </li>
+
+                    <li class="trans-item audio">
+                        <button class="time-jump" data-time="105">[01:45]</button>
+                        <span class="tag-audio">TITAN:</span>
+                        "I hate when she does that."
+                    </li>
+
+                    <li class="trans-item visual">
+                        <button class="time-jump" data-time="106">[01:46]</button> 
+                        <span class="tag-visual">VISUAL:</span> 
+                        The Titan and the Hunter follow her, diving into the adventure.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <p>© 2024 Portal Accesible de Destiny — Proyecto académico</p>
+        <p>No oficial. Todo el contenido pertenece a Bungie.</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/video.js"></script>
+
+</body>
+</html>

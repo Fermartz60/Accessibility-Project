@@ -1,0 +1,119 @@
+/* ... (Mantén los estilos anteriores del reproductor y botones) ... */
+
+/* --- CAJA DE TRANSCRIPCIÓN --- */
+.transcript-box {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.transcript-intro {
+    margin-bottom: 2rem;
+    font-style: italic;
+    opacity: 0.8;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 1rem;
+}
+
+.transcript-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacio entre bloques */
+}
+
+/* Estilo Base del Item */
+.trans-item {
+    padding: 1.2rem;
+    border-radius: 8px;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start; /* Alinear arriba por si es texto largo */
+    gap: 1rem;
+    border-left-width: 6px; /* Borde lateral más grueso */
+    border-left-style: solid;
+    transition: transform 0.2s ease;
+}
+
+.trans-item:hover {
+    transform: translateX(5px); /* Pequeño movimiento al pasar el mouse */
+}
+
+/* --- 1. DESCRIPCIÓN VISUAL (AD) - AZUL --- */
+.trans-item.visual {
+    /* Fondo azul claro sólido pero suave para lectura */
+    background-color: #eef7ff; 
+    border-left-color: #0057d6; /* Azul fuerte */
+    color: #0b2e59; /* Texto azul muy oscuro para contraste */
+}
+
+.tag-visual {
+    font-weight: 900;
+    color: #0057d6;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    display: inline-block;
+    min-width: 80px; /* Alineación fija */
+}
+
+/* --- 2. DIÁLOGOS (CC) - AMARILLO/DORADO --- */
+.trans-item.audio {
+    /* Fondo crema/dorado suave */
+    background-color: #fffbf0; 
+    border-left-color: #b38f00; /* Dorado oscuro */
+    color: #4a3b00; /* Texto café oscuro para contraste */
+}
+
+.tag-audio {
+    font-weight: 900;
+    color: #b38f00;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    display: inline-block;
+    min-width: 80px;
+}
+
+/* Botón de Tiempo (Time Jump) */
+.time-jump {
+    background-color: rgba(0,0,0,0.1); /* Oscuro sutil */
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: bold;
+    color: inherit; /* Hereda el color oscuro del texto */
+    cursor: pointer;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.time-jump:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* --- MODO OSCURO (Ajuste de colores de fondo) --- */
+body.dark-mode .trans-item.visual {
+    background-color: #0a1a2f; /* Azul muy oscuro */
+    color: #e0eaff; /* Texto claro */
+    border-left-color: #4a9eff;
+}
+body.dark-mode .trans-item.visual .tag-visual { color: #4a9eff; }
+
+body.dark-mode .trans-item.audio {
+    background-color: #2b2205; /* Dorado muy oscuro */
+    color: #ffeedd; /* Texto claro */
+    border-left-color: #f4c542;
+}
+body.dark-mode .trans-item.audio .tag-audio { color: #f4c542; }
+
+body.dark-mode .time-jump {
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+}

@@ -1,0 +1,118 @@
+/* ==========================================================
+   THEME.CSS — Estilo Destiny + Modo Oscuro + Variables
+   ========================================================== */
+
+:root {
+  --bg-color: #f4f4f4;
+  --card-bg: #ffffff;
+  --text-color: #0b0b0c;
+
+  --gold: #b38f00; /* Oscurecido un poco para mejor lectura sobre blanco */
+  
+  /* CORRECCIÓN DE CONTRASTE:
+     El azul original #4a9eff era muy claro (2.6:1).
+     Este nuevo azul #0056b3 pasa el ratio 4.5:1 (AA).
+  */
+  --blue: #0056b3; 
+
+  --link-color: #004aad;
+  --link-hover: #002e6d;
+
+  --focus-color: #0056b3; /* Foco visible en modo claro */
+
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-strong: rgba(0, 0, 0, 0.18);
+
+  --transition-theme: 0.4s ease;
+}
+
+body {
+  background: linear-gradient(135deg, #e8e8e8 0%, #dcdcdc 100%);
+  transition: background var(--transition-theme), color var(--transition-theme);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px var(--shadow-light);
+  transition: background var(--transition-theme), box-shadow var(--transition-theme);
+}
+
+/* ---------------- DESTINY AESTHETICS ---------------- */
+
+.destiny-glow {
+  /* Sombra de texto ajustada */
+  text-shadow: 0 0 1px rgba(0,0,0,0.1); 
+}
+
+.destiny-border {
+  border: 1px solid rgba(179, 143, 0, 0.35);
+  box-shadow: 0 0 15px rgba(179, 143, 0, 0.15);
+}
+
+.destiny-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.destiny-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(179, 143, 0, 0.25);
+}
+
+/* Clases de utilidad para colores */
+.gold-text {
+    color: var(--gold); /* Usará el dorado oscurecido en modo claro */
+    font-weight: bold;
+}
+
+/* ==========================================================
+   MODO OSCURO
+   ========================================================== */
+
+body.dark-mode {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+}
+
+body.dark-mode {
+  --bg-color: #0a0a0f;
+  --card-bg: #14141f;
+  --text-color: #ffffff;
+
+  /* En modo oscuro, el azul claro y dorado original SÍ funcionan bien */
+  --link-color: #4a9eff; 
+  --link-hover: #76b8ff;
+
+  --focus-color: #f4c542; /* Dorado brillante para foco oscuro */
+  --gold: #f4c542; 
+
+  --shadow-light: rgba(255, 255, 255, 0.05);
+  --shadow-strong: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .gold-text {
+    color: var(--gold);
+}
+
+body.dark-mode .card {
+  box-shadow: 0 6px 20px rgba(244, 197, 66, 0.18);
+}
+
+body.dark-mode .nav {
+  border-bottom: 1px solid rgba(244, 197, 66, 0.2);
+}
+
+body.dark-mode footer {
+  border-top: 1px solid rgba(244, 197, 66, 0.2);
+}
+
+body.dark-mode a:hover {
+  color: var(--link-hover);
+}
+
+* {
+  transition: background var(--transition-theme), 
+              color var(--transition-theme), 
+              border-color var(--transition-theme),
+              box-shadow var(--transition-theme);
+}

@@ -1,0 +1,54 @@
+/* ==========================================================
+   ACCESSIBILITY.CSS — Herramientas para WCAG 2.2
+   ========================================================== */
+
+/* 1. CLASE "VISUALLY HIDDEN" (Invisible visualmente, visible para robots)
+   -----------------------------------------------------------------------
+   Usa esto para títulos que ayudan a la estructura (h2) pero que
+   ensucian el diseño visual. El lector de pantalla SI los leerá.
+*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 2. FOCO VISIBLE (Focus Ring)
+   -----------------------------------------------------------------------
+   Cuando navegas con TAB, esto resalta dónde estás.
+   Usamos un borde doble (blanco y negro/color) para que se vea
+   sobre CUALQUIER fondo (claro u oscuro).
+*/
+*:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--bg-color); /* Crea espacio alrededor del foco */
+}
+
+/* Aseguramos que el foco no se esconda en botones */
+button:focus-visible {
+  outline: 3px solid var(--gold, #f4c542);
+  outline-offset: 2px;
+}
+
+/* 3. REDUCCIÓN DE MOVIMIENTO
+   -----------------------------------------------------------------------
+   Si el usuario tiene configurado en su sistema "reducir movimiento"
+   (porque se marea), quitamos las animaciones.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

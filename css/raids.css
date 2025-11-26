@@ -1,0 +1,147 @@
+/* ==========================================================
+   RAIDS.CSS — Estilos específicos para la página de Raids
+   ========================================================== */
+
+/* --- 🛠️ OVERRIDES GLOBALES (PARA ESTA PÁGINA) --- */
+:root {
+    --bg-color: transparent; 
+    --text-color: #ffffff; 
+    --card-bg: rgba(20, 10, 10, 0.85); /* Un tono rojizo muy oscuro para las tarjetas */
+}
+
+/* Fondo Épico de Raids */
+body {
+    /* Asegúrate de guardar la imagen como 'assets/img/fondoraids.jpg' */
+    background: 
+        /* Capa de oscurecimiento rojiza para entonar con la imagen */
+        linear-gradient(rgba(20, 5, 5, 0.7), rgba(10, 0, 0, 0.9)),
+        url('../assets/img/fondoraids.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax */
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Ajustes de Navegación y Footer para fondo oscuro */
+.nav {
+    background-color: rgba(0, 0, 0, 0.7) !important; 
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 100, 100, 0.1) !important; /* Borde rojo sutil */
+}
+
+.nav-list li a { color: #fff !important; }
+.nav-list li a:hover { background-color: rgba(255, 255, 255, 0.1) !important; }
+.nav-list li a.active { 
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: var(--gold) !important;
+}
+.nav-logo { color: #fff !important; }
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: #ccc !important;
+    border-top: 1px solid rgba(255, 100, 100, 0.1) !important;
+}
+
+/* --- CONTENIDO DE RAIDS --- */
+
+.raids-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+/* HEADER PERSONALIZADO */
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-title-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    /* Sombra roja brillante para que destaque */
+    filter: drop-shadow(0 0 15px rgba(255, 50, 50, 0.6)); 
+}
+
+.title-with-icon h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.page-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    line-height: 1.6;
+}
+
+/* GRID DE RAIDS */
+.raids-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* TARJETAS INDIVIDUALES */
+.raid-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 100, 100, 0.1); /* Borde rojo tenue */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.raid-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(200, 50, 50, 0.3); /* Resplandor rojo al hover */
+    border-color: rgba(255, 100, 100, 0.4);
+}
+
+.raid-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 100, 100, 0.3);
+    transition: transform 0.4s ease;
+}
+
+.raid-card:hover .raid-img {
+    transform: scale(1.05); /* Zoom suave en la imagen */
+}
+
+.raid-card h2 {
+    margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.raid-card p {
+    margin: 0 1.5rem 2rem 1.5rem;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
