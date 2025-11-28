@@ -54,13 +54,13 @@
     <!-- CONTENIDO -->
     <main id="contenido" tabindex="-1" class="classes-container">
 
-        <section class="page-intro">
+        <section class="page-intro" role="text">
             <h1>Clases de Guardianes</h1>
             <p>Selecciona una clase para ver sus habilidades y estilo de juego.</p>
         </section>
 
         <!-- Selector de Pestañas -->
-        <section aria-labelledby="selector-clases" class="class-selector">
+        <section  class="class-selector">
             <h2 id="selector-clases">Selecciona una clase</h2>
 
             <!-- role="tablist" indica que esto es un menú de pestañas -->
@@ -73,7 +73,7 @@
 
         <!-- CONTENIDO DINÁMICO -->
         <!-- aria-live="polite": Si el contenido cambia, el lector esperará a que el usuario termine de hacer cosas para leerlo -->
-        <section aria-live="polite" aria-labelledby="info-clase" class="class-info">
+        <section aria-live="polite"  class="class-info">
             
             <!-- Título invisible para diseño, pero visible para lectores -->
             <h2 id="info-clase" class="visually-hidden">Información de la clase</h2>
